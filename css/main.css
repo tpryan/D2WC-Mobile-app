@@ -4,6 +4,14 @@ body{
 	font-family: Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
 	margin: 0 auto;
 	padding: 0 20px;
+	text-shadow: #aaa 1px 1px 1px;
+}
+
+p{
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: -1px;
+	word-spacing: 3px;
 }
 
 h1{
@@ -49,7 +57,10 @@ article{
 	margin-bottom: 5px;
 }
 
-
+.speakers{
+	position: relative;
+	bottom: 0;
+}
 
 .dev{
 	background-color: #0CF;
@@ -62,6 +73,46 @@ article{
 .hybrid{
 	background-color: #F93;
 }
+
+
+
+#speakers article{
+	border-radius: 8px;
+	padding: 5px 15px;
+	margin-bottom: 5px;
+	clear: both;
+	float: left;
+}
+
+#speakers article h1{
+	font-size: 30px;
+	padding: 0;
+
+}
+
+
+#speakers article img{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #FFF;
+	-moz-box-shadow:    1px 1px 5px 1px #111;
+	-webkit-box-shadow: 1px 1px 5px 1px #111;
+	-ms-box-shadow: 1px 1px 5px 1px #111;
+	box-shadow: 1px 1px 5px 1px #111;
+}
+
+.blurb{
+	padding: 0 0 0 15px;
+	margin: 5px 0 0 0;
+	font-style: italic;
+	border-left: 2px solid #dedede;
+	line-height: 2;
+	color: #dedede;
+	font-size: 21px;
+	text-shadow: #666 1px 1px 1px;
+}
+
 
 @media (min-width:750px) {
 
@@ -91,5 +142,7 @@ article{
 		display: table-cell;
 		width: 175px;
 	}
+
+
 
 }
