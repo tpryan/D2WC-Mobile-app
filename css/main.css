@@ -1,10 +1,43 @@
-body{
+html{
 	background-color: #383838;
+	
+	background-image: linear-gradient(left , rgb(41,46,51) 0%, rgb(102,102,102) 50%, rgb(41,46,51) 100%);
+	background-image: -o-linear-gradient(left , rgb(41,46,51) 0%, rgb(102,102,102) 50%, rgb(41,46,51) 100%);
+	background-image: -moz-linear-gradient(left , rgb(41,46,51) 0%, rgb(102,102,102) 50%, rgb(41,46,51) 100%);
+	background-image: -webkit-linear-gradient(left , rgb(41,46,51) 0%, rgb(102,102,102) 50%, rgb(41,46,51) 100%);
+	background-image: -ms-linear-gradient(left , rgb(41,46,51) 0%, rgb(102,102,102) 50%, rgb(41,46,51) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(0, rgb(41,46,51)),
+		color-stop(0.5, rgb(102,102,102)),
+		color-stop(1, rgb(41,46,51))
+	);
+
+	
+}
+
+body{
 	color: #FFFFFF;
 	font-family: Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
 	margin: 0 auto;
 	padding: 0 20px;
-	text-shadow: #aaa 1px 1px 1px;
+	text-shadow: #333 1px 1px 1px;
+	
+}
+
+h1#logo {
+	width: 332px; height: 116px;
+	background: url("logo.png");
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+
+body header h1{
+	display: fixed;
+	position: static/relative/absolute/fixed;
 }
 
 p{
@@ -12,6 +45,7 @@ p{
 	line-height: 1.5;
 	letter-spacing: -1px;
 	word-spacing: 3px;
+	text-shadow: #8D8D8D 0px 1px 5px;
 }
 
 h1{
@@ -26,6 +60,30 @@ section h1{
 
 article{
 	padding: 0 10px;
+}
+
+.fullslot {
+	
+	border-radius: 8px;
+	padding: 0 10px 20px 10px;
+	background-color: #cdcdcd;
+	color: #fff;
+	text-shadow: #8D8D8D 1px 1px 1px;
+
+	background-image: linear-gradient(bottom, rgb(163,160,163) 5%, rgb(205,205,205) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(163,160,163) 5%, rgb(205,205,205) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(163,160,163) 5%, rgb(205,205,205) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(163,160,163) 5%, rgb(205,205,205) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(163,160,163) 5%, rgb(205,205,205) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(163,160,163)),
+		color-stop(0.77, rgb(205,205,205))
+	);
+
 }
 
 .fullslot h1{
@@ -47,14 +105,35 @@ article{
 
 }
 
+.timeslot{
+	margin-bottom: 30px;
+}
+
 .timeslot time{
 	font-size: 25px;
 	background-color: #FFFFFF;
 	color: #000000;
 	display: block;
 	border-radius: 8px;
-	padding: 5px 10px;
+	padding: 8px 10px;
 	margin-bottom: 5px;
+	text-shadow: #aaa 1px 1px 1px;
+	margin-top: 0;
+
+	background-image: linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(237,232,237)),
+		color-stop(0.77, rgb(255,255,255))
+	);
+
 }
 
 .speakers{
@@ -62,16 +141,66 @@ article{
 	bottom: 0;
 }
 
+.dev, .design, .hybrid{
+	text-shadow: #aaa 1px 1px 1px;
+}
+
 .dev{
 	background-color: #0CF;
+	text-shadow: #00667F 1px 1px 1px;
+
+	background-image: linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(15,154,189)),
+		color-stop(0.77, rgb(0,204,255))
+	);
 }
 
 .design{
-	background-color: #9C0;
+	background-color: #99CC00;
+	text-shadow: #00667F 1px 1px 1px;
+
+	background-image: linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(123,156,22)),
+		color-stop(0.77, rgb(153,204,0))
+	);
 }
 
 .hybrid{
-	background-color: #F93;
+	background-color: #FF9933;
+	text-shadow: #698C00 1px 1px 1px;
+
+	background-image: linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(209,140,71)),
+		color-stop(0.77, rgb(255,153,51))
+	);
+
 }
 
 
@@ -112,12 +241,84 @@ article{
 	font-size: 21px;
 	text-shadow: #666 1px 1px 1px;
 }
+.day header{
+	border-radius: 8px;
+	background-color: #000;
+	padding: 5px 0px;
+	margin-bottom: 10px;
+
+	background-image: linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(0,0,0)),
+		color-stop(0.77, rgb(64,62,64))
+	);
+}
+
+
+#home nav ul{
+	list-style: none;
+	border-radius: 8px;
+	padding: 30px 10px;
+	margin-bottom: 5px;
+	text-shadow: #aaa 1px 1px 1px;
+	margin-top: 0;
+
+	background-image: linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(237,232,237)),
+		color-stop(0.77, rgb(255,255,255))
+	);
+}
+
+#home nav ul a{
+	display: block;
+	text-decoration: none;
+	border-radius: 8px;
+	padding: 8px 10px;
+	margin-bottom: 5px;
+	text-shadow: #aaa 1px 1px 1px;
+	margin-top: 0;
+	color: #FFF;
+	font-size: 40px;
+
+	background-image: linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.05, rgb(0,0,0)),
+		color-stop(0.77, rgb(64,62,64))
+	);
+}
+
+
 
 
 @media (min-width:750px) {
 
 	body{
-		width: 768px; 
+		width: 738px; 
 	}
 
 	.timeslot{
@@ -129,18 +330,30 @@ article{
 
 	.fullslot{
 		display: table-cell;
-		width: 100%;
+		padding: 0;
+		margin: 0;
+		padding: 5px 10px;
+		width: 605px;
+	}
+
+	.day header{
+		margin-right: 4px;
 	}
 
 	.timeslot time{
-		width: 110px;
+		width: 115px;
 		font-size: 19px;
+		display: table-cell;
+		padding: 0;
+		margin: 0;
+		padding: 5px 5px;
 
 	}
 
 	.session{
 		display: table-cell;
-		width: 175px;
+		width: 185px;
+		padding: 5px 10px;
 	}
 
 

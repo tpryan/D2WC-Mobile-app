@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="test.ant" name="d2wc.dev" basedir=".">
+
+	<property file="build.properties"/>
+
+	<target name="build" depends="clean,copyFilesToBuild" description="Creating a clean copy of the site" />
+
+	<target name="deployToWeb" depends="build,cleanWeb,uploadFilesToProd" description="Sending Files to Prod" />
+
+
+	<target name="test.ant" description="Exports the script of the database ">
+		<echo message="Testing ant in this environment. " />
+		<echo message="basedir:     ${basedir}" />
+		<echo message="ant.version: ${ant.version}" />
+		<echo message="build.dir:     ${build.dir}" />
+		<echo message="package.dir:     ${package.dir}" />
+	</target>
+
+	<target name="clean">
+		<echo message="Cleaning Build Space"/>
+		<delete dir="${build.dir}"/>
+	</target>
+
+
+
+	<target name="copyFilesToBuild" description="Create a gitless version of the source code.">
+		<echo message="Copying Files to Build Location"/>
+		<copy todir="${build.dir}" preservelastmodified="true">
+			<fileset dir="${basedir}">
+				<exclude name='.gitignore'/>
+				<exclude name='.git/**'/>
+			</fileset>	
+		</copy>
+	</target>
+
+	<target name="uploadFilesToProd" description="Pushes application to production.">
+
+		<echo message="Pushing Text to Prod"/>
+		<ftp server="${ftp.server}" userid="${ftp.username}" password="${ftp.password}" 
+				timediffauto="true"  retriesAllowed="1" passive="yes" remotedir="/examples/d2wc" depends="yes" 
+				action="send" verbose="${verbose}" binary="no" timestampGranularity="MINUTE">
+			<fileset dir="${build.dir}">
+				<include name="**/*.css"/>
+				<include name="**/*.html"/>
+				<include name="**/*.js"/>
+			</fileset>
+		</ftp>
+
+		<echo message="Pushing Binaries to Prod"/>
+		<ftp server="${ftp.server}" userid="${ftp.username}" password="${ftp.password}" 
+			timediffauto="true"  retriesAllowed="1" passive="yes" remotedir="/examples/d2wc" depends="yes" 
+			action="send" verbose="${verbose}" binary="yes" timestampGranularity="MINUTE">
+			<fileset dir="${build.dir}">
+				<include name="**/*.png*"/>
+			</fileset>
+		</ftp>
+		
+	</target>
+
+	<target name="cleanWeb" description="Empties out Remote Directory.">
+
+		<echo message="Deleting from Prod"/>
+		<ftp server="${ftp.server}" userid="${ftp.username}" password="${ftp.password}" 
+				 passive="yes" remotedir="/examples/d2wc" 
+				action="del" verbose="${verbose}"  >
+			<fileset>
+				<include name="**/*.css"/>
+				<include name="**/*.html"/>
+				<include name="**/*.js"/>
+				<include name="**/*.png*"/>
+				<include name="css"/>
+			</fileset>
+
+			<fileset dir="css" />
+		</ftp>
+
+		<ftp server="${ftp.server}" userid="${ftp.username}" password="${ftp.password}" 
+				 passive="yes" remotedir="/examples/d2wc" 
+				action="rmdir" verbose="${verbose}"  >
+			<fileset>
+				<include name="**/**"/>
+			</fileset>
+
+		</ftp>
+
+		
+	</target>
+
+</project>	
