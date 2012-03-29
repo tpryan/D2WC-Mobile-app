@@ -19,6 +19,8 @@ html{
 	
 }
 
+
+
 body{
 	color: #FFFFFF;
 	font-family: Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
@@ -33,11 +35,15 @@ h1#logo {
 	background: url("logo.png");
 	background-repeat: no-repeat;
 	text-indent: -9999px;
+	float: left;
 }
 
 body header h1{
 	display: fixed;
-	position: static/relative/absolute/fixed;
+}
+
+section{
+	clear: both;
 }
 
 p{
@@ -45,7 +51,7 @@ p{
 	line-height: 1.5;
 	letter-spacing: -1px;
 	word-spacing: 3px;
-	text-shadow: #8D8D8D 0px 1px 5px;
+	/*text-shadow: #8D8D8D 0px 1px 5px;*/
 }
 
 h1{
@@ -117,7 +123,7 @@ article{
 	border-radius: 8px;
 	padding: 8px 10px;
 	margin-bottom: 5px;
-	text-shadow: #aaa 1px 1px 1px;
+	text-shadow: #ccc 1px 1px 5px;
 	margin-top: 0;
 
 	background-image: linear-gradient(bottom, rgb(237,232,237) 5%, rgb(255,255,255) 77%);
@@ -147,7 +153,7 @@ article{
 
 .dev{
 	background-color: #0CF;
-	text-shadow: #00667F 1px 1px 1px;
+	text-shadow: #00667F 1px 1px 3px;
 
 	background-image: linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
 	background-image: -o-linear-gradient(bottom, rgb(15,154,189) 5%, rgb(0,204,255) 77%);
@@ -166,7 +172,7 @@ article{
 
 .design{
 	background-color: #99CC00;
-	text-shadow: #00667F 1px 1px 1px;
+	text-shadow: #3A4C00 1px 1px 3px;
 
 	background-image: linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
 	background-image: -o-linear-gradient(bottom, rgb(123,156,22) 5%, rgb(153,204,0) 77%);
@@ -185,7 +191,7 @@ article{
 
 .hybrid{
 	background-color: #FF9933;
-	text-shadow: #698C00 1px 1px 1px;
+	text-shadow: #7F4C19 1px 1px 3px;
 
 	background-image: linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
 	background-image: -o-linear-gradient(bottom, rgb(209,140,71) 5%, rgb(255,153,51) 77%);
@@ -204,11 +210,28 @@ article{
 }
 
 
+.dev a{
+	color: #00667F;
+	text-shadow: #003340 1px 1px 3px;
+}
+
+
+.design a{
+	color: #3A4C00;
+	text-shadow: #394C00 1px 1px 3px;
+}
+
+.hybrid a{
+	color: #7F4C19;
+	text-shadow: #7F4C19 1px 1px 3px;
+}
+
+
 
 #speakers article{
 	border-radius: 8px;
 	padding: 5px 15px;
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 	clear: both;
 	float: left;
 }
@@ -262,11 +285,21 @@ article{
 	);
 }
 
+nav{
+	float: right;
+	display: block;
+	margin-right: 20px;
+	margin-top: 30px;
 
-#home nav ul{
+}
+
+nav ul{
+	width: 315px;
+	float: left;
+
 	list-style: none;
 	border-radius: 8px;
-	padding: 30px 10px;
+	padding: 5px 5px;
 	margin-bottom: 5px;
 	text-shadow: #aaa 1px 1px 1px;
 	margin-top: 0;
@@ -284,18 +317,21 @@ article{
 		color-stop(0.05, rgb(237,232,237)),
 		color-stop(0.77, rgb(255,255,255))
 	);
+
 }
 
-#home nav ul a{
+nav ul a{
 	display: block;
+	float: left;
 	text-decoration: none;
 	border-radius: 8px;
 	padding: 8px 10px;
 	margin-bottom: 5px;
-	text-shadow: #aaa 1px 1px 1px;
+	margin-right: 15px;
+	text-shadow: #666666 1px 1px 5px;
 	margin-top: 0;
 	color: #FFF;
-	font-size: 40px;
+	font-size: 20px;
 
 	background-image: linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
 	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 5%, rgb(64,62,64) 77%);
@@ -312,6 +348,25 @@ article{
 	);
 }
 
+#home nav{
+	margin-top: 20px;
+	float: none;
+	display: block;
+	clear: both;
+
+}
+
+#home nav ul{
+	width: auto;
+	float: none;
+}
+
+#home nav ul a{
+	float: none;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
 
 
 
@@ -325,7 +380,7 @@ article{
 		display: table;
 		padding: 0;
 		margin: 0;
-		border-spacing: 5px;
+		border-spacing: 6px 3px;
 	}
 
 	.fullslot{
@@ -333,16 +388,21 @@ article{
 		padding: 0;
 		margin: 0;
 		padding: 5px 10px;
-		width: 605px;
+		width: 577px;
 	}
 
 	.day header{
-		margin-right: 4px;
+		margin: 0 4px 6px 4px;
+		width: 715px;
+	}
+
+	.day{
+		margin-bottom: 30px;
 	}
 
 	.timeslot time{
-		width: 115px;
-		font-size: 19px;
+		width: 100px;
+		font-size: 16px;
 		display: table-cell;
 		padding: 0;
 		margin: 0;
@@ -352,7 +412,7 @@ article{
 
 	.session{
 		display: table-cell;
-		width: 185px;
+		width: 175px;
 		padding: 5px 10px;
 	}
 
