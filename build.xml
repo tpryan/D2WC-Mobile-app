@@ -43,6 +43,7 @@
 				<include name="**/*.css"/>
 				<include name="**/*.html"/>
 				<include name="**/*.js"/>
+				<include name="**/*.svg"/>
 			</fileset>
 		</ftp>
 
@@ -52,6 +53,9 @@
 			action="send" verbose="${verbose}" binary="yes" timestampGranularity="MINUTE">
 			<fileset dir="${build.dir}">
 				<include name="**/*.png*"/>
+				<include name="**/*.eot*"/>
+				<include name="**/*.ttf*"/>
+				<include name="**/*.woff*"/>
 			</fileset>
 		</ftp>
 		
@@ -64,6 +68,10 @@
 				 passive="yes" remotedir="/examples/d2wc" 
 				action="del" verbose="${verbose}"  >
 			<fileset>
+				<include name="**/*.svg"/>
+				<include name="**/*.eot"/>
+				<include name="**/*.ttf"/>
+				<include name="**/*.woff"/>
 				<include name="**/*.css"/>
 				<include name="**/*.html"/>
 				<include name="**/*.js"/>

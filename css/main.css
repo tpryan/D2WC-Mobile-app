@@ -1,3 +1,40 @@
+@font-face {
+    font-family: 'TradeGothicLTStdRegular';
+    src: url('fonts/tradegothicltstd-webfont.eot');
+    src: url('fonts/tradegothicltstd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tradegothicltstd-webfont.woff') format('woff'),
+         url('fonts/tradegothicltstd-webfont.ttf') format('truetype'),
+         url('fonts/tradegothicltstd-webfont.svg#TradeGothicLTStdRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TradeGothicLTStdBoldNo.2';
+    src: url('fonts/tradegothicltstd-bd2-webfont.eot');
+    src: url('fonts/tradegothicltstd-bd2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tradegothicltstd-bd2-webfont.woff') format('woff'),
+         url('fonts/tradegothicltstd-bd2-webfont.ttf') format('truetype'),
+         url('fonts/tradegothicltstd-bd2-webfont.svg#TradeGothicLTStdBoldNo.2') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+    src: url('fonts/tradegothicltstd-bdcn20-webfont.eot');
+    src: url('fonts/tradegothicltstd-bdcn20-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tradegothicltstd-bdcn20-webfont.woff') format('woff'),
+         url('fonts/tradegothicltstd-bdcn20-webfont.ttf') format('truetype'),
+         url('fonts/tradegothicltstd-bdcn20-webfont.svg#TradeGothicLTStdBdCnNo.20') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 html{
 	background-color: #383838;
 	
@@ -16,18 +53,23 @@ html{
 		color-stop(1, rgb(41,46,51))
 	);
 
-	
+	overflow-x: hidden;
 }
 
 
 
 body{
 	color: #FFFFFF;
-	font-family: Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
+	font-family: TradeGothicLTStdRegular, Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
 	margin: 0 auto;
 	padding: 0 20px;
 	text-shadow: #333 1px 1px 1px;
 	
+}
+
+h1{
+	font-family: 'TradeGothicLTStdBoldNo.2', Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
+	font-weight: normal;
 }
 
 h1#logo {
@@ -36,6 +78,11 @@ h1#logo {
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	float: left;
+}
+
+h1#logo a {
+	width: 332px; height: 116px;
+	display: block;
 }
 
 body header h1{
@@ -140,6 +187,12 @@ article{
 		color-stop(0.77, rgb(255,255,255))
 	);
 
+	text-align: right;
+
+}
+
+.timeslot time div{
+	padding-right: 5px;
 }
 
 .speakers{
@@ -257,12 +310,14 @@ article{
 .blurb{
 	padding: 0 0 0 15px;
 	margin: 5px 0 0 0;
-	font-style: italic;
+	
 	border-left: 2px solid #dedede;
 	line-height: 2;
 	color: #dedede;
 	font-size: 21px;
-	text-shadow: #666 1px 1px 1px;
+	
+	font-family: 'TradeGothicLTStdBdCnNo.20', Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
+	font-weight: normal;
 }
 .day header{
 	border-radius: 8px;
@@ -286,21 +341,17 @@ article{
 }
 
 nav{
-	float: right;
 	display: block;
-	margin-right: 20px;
-	margin-top: 30px;
-
+	clear: both;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
+	font-weight: normal;
 }
 
 nav ul{
-	width: 315px;
-	float: left;
-
 	list-style: none;
 	border-radius: 8px;
 	padding: 5px 5px;
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 	text-shadow: #aaa 1px 1px 1px;
 	margin-top: 0;
 
@@ -322,12 +373,11 @@ nav ul{
 
 nav ul a{
 	display: block;
-	float: left;
+
 	text-decoration: none;
 	border-radius: 8px;
 	padding: 8px 10px;
 	margin-bottom: 5px;
-	margin-right: 15px;
 	text-shadow: #666666 1px 1px 5px;
 	margin-top: 0;
 	color: #FFF;
@@ -368,12 +418,36 @@ nav ul a{
 }
 
 
-
+@media (max-width:500px) {
+	img{
+		width: 100px;
+		height: 100px;
+	}
+}
 
 @media (min-width:750px) {
 
 	body{
 		width: 738px; 
+	}
+
+	#logo{
+		margin: 20px 0 0 0 ;
+		float: left;
+	}
+
+	nav{
+		clear: none;
+	}
+
+	nav ul {
+		width: 200px;
+		margin: 10px 20px 10px 0 ;
+		float: right;
+	}
+
+	nav ul a{
+		font-size: 20px;
 	}
 
 	.timeslot{
