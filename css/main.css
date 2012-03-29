@@ -187,12 +187,11 @@ article{
 		color-stop(0.77, rgb(255,255,255))
 	);
 
-	text-align: right;
 
 }
 
 .timeslot time div{
-	padding-right: 5px;
+	display: inline;
 }
 
 .speakers{
@@ -488,6 +487,16 @@ nav ul a{
 		display: table-cell;
 		width: 175px;
 		padding: 5px 10px;
+	}
+
+	.timeslot time{
+		padding: 0px 5px 5px 5px;
+		text-align: right;
+
+	}
+
+	.timeslot time div{
+		display: block;
 	}
 
 
