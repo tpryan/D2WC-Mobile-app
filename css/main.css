@@ -85,6 +85,16 @@ h1#logo a {
 	display: block;
 }
 
+h2{
+	font-family: 'TradeGothicLTStdBoldNo.2', Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
+	clear: both;
+	font-size: 40px;
+}
+
+h3{
+	font-family: 'TradeGothicLTStdBoldNo.2', Cambria,Georgia,"New Century Schoolbook","Century Schoolbook L","Times New Roman",serif;
+}
+
 body header h1{
 	display: fixed;
 }
@@ -280,7 +290,7 @@ article{
 
 
 
-#speakers article{
+.speaker article{
 	border-radius: 8px;
 	padding: 5px 15px;
 	margin-bottom: 30px;
@@ -288,14 +298,14 @@ article{
 	float: left;
 }
 
-#speakers article h1{
+.speaker article h1{
 	font-size: 30px;
 	padding: 0;
 
 }
 
 
-#speakers article img{
+.speaker article img{
 	float: right;
 	margin-left: 10px;
 	margin-bottom: 10px;
@@ -414,6 +424,50 @@ nav ul a{
 	float: none;
 	font-size: 40px;
 	margin-bottom: 10px;
+}
+
+#speakerlist{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+
+#speakerlist li{
+	font-size: 30px;
+	border-radius: 8px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+
+}
+
+#speakerlist li h3{
+	margin: 0;
+	padding: 0;
+
+}
+
+#speakerlist li a{
+	display: block;
+
+}
+
+#speakerlist  a{
+	text-decoration: none;
+}
+
+#speakerlist .dev a{
+	color: #fff;
+}
+
+
+#speakerlist .design a{
+	color: #fff;
+}
+
+#speakerlist .hybrid a{
+	color: #fff;
 }
 
 
