@@ -470,6 +470,22 @@ nav ul a{
 	color: #fff;
 }
 
+#schedule  #content article{
+}
+
+#schedule  #content a{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	width: 100%;
+	min-height: 65px;
+}
+
+#schedule  #content .session a{
+	min-height: 165px;
+}
+
 
 @media (max-width:500px) {
 	img{
