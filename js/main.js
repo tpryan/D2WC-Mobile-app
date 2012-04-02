@@ -4,7 +4,7 @@ var readyFunc = [];
 
 
 ready(function () {
-	replaceLinks();
+	//replaceLinks();
 });
 
 
@@ -41,7 +41,7 @@ function replacePage(){
 	event.preventDefault();
 	var href= this.href;
 	var stateObj = { foo: "bar" };
-	
+	alert(href);
 	
 	var ajax = new XMLHttpRequest();
 	ajax.open("GET",href,true);
