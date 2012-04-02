@@ -209,9 +209,6 @@ article{
 	bottom: 0;
 }
 
-.dev, .design, .hybrid{
-	text-shadow: #aaa 1px 1px 1px;
-}
 
 .dev{
 	background-color: #0CF;
