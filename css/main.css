@@ -287,16 +287,16 @@ article{
 	text-shadow: #7F4C19 1px 1px 3px;
 }
 
-.speaker .dev a{
+.speaker article.dev a{
 	text-shadow: none;
 }
 
 
-.speaker .design a{
+.speaker article.design a{
 	text-shadow: none;
 }
 
-.speaker .hybrid a{
+.speaker article.hybrid a{
 	text-shadow: none;
 }
 
