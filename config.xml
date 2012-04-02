@@ -27,4 +27,8 @@
     <icon src="icons/icon48.png" width="48" height="48"/>
     <icon src="icons/icon72.png" width="72" height="72"/>
 
+
+
+    <gap:splash src="splash/splash.png" />
+
 </widget>
