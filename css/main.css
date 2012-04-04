@@ -634,3 +634,17 @@ nav ul a{
 
 
 }
+
+
+/* animation */
+
+body{
+	position: relative;
+	-webkit-transition: left .2s ease;
+}
+
+
+.toTransition{
+	position: relative;
+}
+
